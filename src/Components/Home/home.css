@@ -1,0 +1,112 @@
+.home{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+.home img{
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    margin-top: 6rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+}
+.home h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.7rem;
+}
+.home h1 span{
+    position: relative;
+    background: linear-gradient(260deg,var(--orangish-color),var(--voilet-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.home p{
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.btn button{
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.btn .contact{
+    padding: .8rem 2.5rem;
+    border: none;
+    background: linear-gradient(45deg,var(--voilet-color),var(--orangish-color),var(--voilet-color));
+    background-position: right;
+    background-size: 200%;
+    color: var(--primary-color);
+    border-radius: 3.13rem;
+    transition: background-position 0.5s ease, color 0.5s ease;
+    cursor: pointer;
+}
+.btn .contact:hover{
+    background-position: left;
+    border: 1px solid var(--primary-color);
+}
+.btn .resume{
+    border: 1px solid var(--primary-color);
+    background: none;
+    padding: .8rem 2.5rem;
+    margin: 1rem;
+    border-radius: 3.13rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: .5s;
+}
+.btn .resume:hover{
+    color: var(--orangish-color);
+}
+
+
+@media(max-width:1024px){
+    .home p{
+        width: 65%;
+    }
+}
+@media(max-width:768px){
+    .home img{
+        margin-bottom: 1rem;
+    }
+    .home h1{
+        font-size: 2.2rem;
+        margin: 0 1.5rem;
+    }
+    .home p{
+        width: 75%;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+    }
+    .btn button{
+        font-size: 0.75rem;
+    }
+    .btn .contact,
+    .btn .resume{
+        padding: .75rem 2.25rem;
+    }
+}
+@media(max-width:425px){
+    .home img{
+        width: 200px;
+        height: 200px;
+    }
+    .home h1{
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+    }
+    .home p{
+        width: 90%;
+        font-size: .9rem;
+    }
+}
+@media(max-width:375px){
+    .btn button{
+        font-size: .65rem;
+    }
+    .btn .contact,
+    .btn .resume{
+        padding: .7rem 1.85rem;
+    }
+}

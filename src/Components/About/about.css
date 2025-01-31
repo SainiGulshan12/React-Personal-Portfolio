@@ -1,0 +1,164 @@
+.about{
+    margin: 3rem 4rem 0 2rem;
+    letter-spacing: 1px;
+    overflow: auto;
+    position: relative;
+}
+
+.about h1{
+    display: inline-block;
+    background: linear-gradient(260deg,var(--orangish-color),var(--voilet-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: auto;
+    font-size: 2rem;
+    animation: translateinfoh1 1.5s linear;
+}
+.about h1::after{
+    position: absolute;
+    content: '';
+    left: 0rem;
+    top: 2.3rem;
+    width: 1.8rem;
+    height: 2px;
+    background: var(--voilet-color);
+    transition: 0.7s ease-out;
+}
+.about h1:hover::after{
+    width: 10rem;
+}
+.content{
+    display: flex;
+    align-items: flex-start;
+}
+.content .info{
+    width: 50%;
+    margin-top: 1.25rem;
+    animation: translateinfoh1 1.5s linear;
+}
+.content .info p{
+    margin-top: .5rem;
+    font-weight: 300;
+}
+.content .info .personal-info{
+    margin-top: 1.25rem;
+}
+.content .info .personal-info p span{
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.content .circle{
+    position: relative;
+    margin: 0rem 0 0 8rem;
+    height: 370px;
+    width: 370px;
+    border-radius: 50%;
+    border: 1.5px solid var(--voilet-color);
+    background: radial-gradient(180px, var(--voilet-color), transparent 90%);
+    animation: rotate 10s linear infinite, translatecircle 2s linear;
+}
+.icon1, .icon2, .icon3, .icon4 {
+    font-size: 3rem;
+}
+.circle div:nth-child(1){
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    color: var(--htm-color);
+}
+.circle div:nth-child(2){
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    color: var(--cs-color);
+} 
+.circle div:nth-child(3){
+    position: absolute;
+    top: 45%;
+    right: 0%;
+    color: var(--js-color);
+}
+.circle div:nth-child(4) {
+    position: absolute;
+    bottom: 0%;
+    left: 45%;
+    color: var(--reac-color);
+}
+@keyframes translateinfoh1{
+    0%{
+        transform: translateX(-600px);  
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes translatecircle{
+    0%{
+        transform: translateX(600px) rotate(0deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(360deg);
+    }
+}
+@keyframes rotate {
+    100%{
+      transform: rotate(360deg);
+    }
+}
+
+
+
+@media(max-width:1024px){
+    .content .circle{
+        margin: 0 0 0 5rem;
+    }
+}
+@media(max-width:768px){
+
+    .content .circle{
+        width: 325px;
+        height: 325px;
+        margin: 0 0 0 1rem;
+    }
+}
+@media(max-width:425px){
+    .about .content{
+        flex-direction: column;
+    }
+    .about h1{
+        font-size: 1.8rem;
+    }
+    .about h1::after{
+        top: 2.1rem;
+        width: 1.5rem;
+    }
+    .about h1:hover::after{
+        width: 9.4rem;
+    }
+    .content .info{
+        width: 85%;
+    }
+    .content .info .personal-info{
+        margin-bottom: 1.5rem;
+    }
+    .content .circle{
+        width: 325px;
+        height: 325px;
+        margin: 0 0 5rem 1rem;
+    }
+}
+@media(max-width:375px){
+    .content .circle{
+        margin: 0 0 5rem 0;
+    }
+    .about h1{
+        font-size: 1.5rem;
+    }
+    .about h1::after{
+        top: 1.8rem;
+        width: 1.4rem;
+    }
+    .about h1:hover::after{
+        width: 8rem;
+    }
+}

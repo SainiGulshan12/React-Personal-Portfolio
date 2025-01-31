@@ -1,0 +1,192 @@
+.contact .heading h1{
+    position: relative;
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: -0.78rem;
+    cursor: default;
+}
+.contact .heading h1::after{
+    position: absolute;
+    content: '';
+    top: 3rem;
+    left: 35.3rem;
+    width: 1.9rem;
+    height: 2px;
+    background: var(--voilet-color);
+    transition: 0.8s ease-out;
+    transform-origin: center;
+}
+.heading h1:hover::after{
+    width: 16.3rem;
+}
+.contact-details{
+    display: flex; 
+    letter-spacing: 0.5px;
+    margin: 4rem 2rem;
+}
+.contact-details .contact-left{
+    width: 35%;
+    margin: 0 5rem;
+}
+.contact-left h2{
+    width: 40%;
+    font-size: 2.2rem;
+    background: linear-gradient(260deg,var(--orangish-color),var(--voilet-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+}
+.contact-left .personal-info{
+    line-height: 2.5rem;
+    margin-top: 1.5rem;
+}
+.contact-left .personal-info span{
+    margin-right: 1.2rem;
+    font-size: 1.5rem;
+}
+.contact-details .contact-right{
+    display: flex;
+    flex-direction: column;
+}
+.contact-right input{
+    width: 525px;
+    height: 50px;
+    border-radius: .63rem;
+    border: none;
+    padding: 1.5rem;
+    margin: .7rem 0;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+}
+.contact-right .textarea{
+    width: 525px;
+    border-radius: .63rem;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1.5rem;
+    border: none;
+    margin: .7rem 0;
+    letter-spacing: 0.5px;
+}
+.contact-right input:focus,
+.contact-right .textarea:focus{
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    border: 1px solid var(--form-border-color);
+}
+.contact-right button{
+    text-decoration: none;
+    color: var(--secondary-color);
+    background: linear-gradient(45deg,var(--orangish-color),var(--voilet-color),var(--orangish-color));
+    background-size: 200%;
+    background-position: right;
+    border: none;
+    font-size: 1rem;
+    padding: .75rem 3rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: .8s;
+}
+.contact-right button:hover{
+    background-position: left;
+    color: var(--primary-color);
+}
+.contact-right .reset{
+    margin-left: 1rem;
+    font-size: .9rem;
+    background: linear-gradient(45deg,var(--orangish-color),var(--voilet-color),var(--orangish-color));
+    background-size: 200%;
+    background-position: right;
+    padding: .8rem 1.35rem;
+    border-radius: 3rem;
+    transition: 0.8s;
+}
+.contact-right .reset:hover{
+    background-position: left;
+    color: var(--primary-color);
+}
+.contact-right button:active{
+    cursor: progress;
+}
+
+@media(max-width:1024px){
+    .contact .heading h1::after{
+        left: 24.5rem;
+        width: 1.9rem;
+    }
+    .contact .heading h1:hover::after{
+        width: 16.3rem;
+    }
+    .contact-details .contact-left{
+        margin: 0 2rem;
+    }
+    .contact-left h2{
+        width: 50%;
+    }
+    .contact-right input,
+    .contact-right .textarea{
+        width: 525px;
+    }
+}
+@media(max-width:768px){
+    .contact .heading h1::after{
+        left: 16.5rem;
+        width: 1.9rem;
+    }
+    .contact .heading h1:hover::after{
+        width: 16.3rem;
+    }
+    .contact-details .contact-left{
+        margin: 0 3rem 0 1rem;
+        width: 40%;
+    }
+    .contact-left h2 {
+        width: 60%;
+    } 
+    .contact-right input,
+    .contact-right .textarea{
+        width: 350px;
+    }
+    .contact-right button{
+        padding: .75rem 2.25rem;
+        font-size: .95rem;
+    }
+    .contact-right .btn .reset{
+        padding: .8rem 1.2rem;
+    }
+}
+@media(max-width:425px){
+    .contact{
+        overflow: auto;
+    }
+    .contact .heading h1::after{
+        left: 5.8rem;
+        width: 1.9rem;
+    }
+    .contact .heading h1:hover::after{
+        width: 16.3rem;
+    }
+    .contact-details{
+        flex-direction: column;
+    }
+    .contact-details .contact-left{
+        width: 90%;
+        margin: 0 0 4rem 1rem;
+    }
+}
+@media(max-width:375px){
+    .contact-right input,
+    .contact-right .textarea{
+        width: 290px;
+    }
+    .contact-right button{
+        padding: .75rem 1.8rem;
+        font-size: .9rem;
+    }
+    .contact-right .btn .reset{
+        padding: .8rem 1.1rem;
+        font-size: .85rem;
+        margin-left: 0.5rem;
+    }
+}

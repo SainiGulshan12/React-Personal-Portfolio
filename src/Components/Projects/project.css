@@ -1,0 +1,102 @@
+.project{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 2rem 7rem;
+}
+.project-detail{
+    display: inline-grid;
+    perspective: 1000px;
+}
+.project-detail img{
+    object-fit: cover;
+    width: 480px;
+    height: 14rem;
+    border-radius: .63rem;
+    transition: 0.8s ease-in-out;
+    transform-origin: center;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+.project-detail:hover img{
+    transform: rotateY(180deg);    
+}
+.project-detail:nth-child(1){
+    animation: translateproject-detail1 1s ease-in;
+}
+.project-detail:nth-child(2){
+    animation: translateproject-detail1 1s ease-in;
+}
+.project-detail:nth-child(3){
+    animation: translateproject-detail2 1s ease-in;
+}
+.project-detail:nth-child(4){
+    animation: translateproject-detail2 1s ease-in;
+}
+.project-detail .btn{
+    padding: 1rem;
+    margin: -10rem 3rem;
+    z-index: 2;
+}
+.project-detail .btn .link{
+    text-decoration: none;
+    color: var(--secondary-color);
+    background: linear-gradient(260deg,var(--voilet-color),var(--orangish-color));
+    padding: .8rem 2.5rem;
+    margin: 0 1rem;
+    border-radius: 3rem;
+    transition: 0.5s;
+    opacity: 0;
+}
+.project-detail:hover .btn .link{
+    opacity: 1;
+}
+.project-detail .btn .link:hover{
+    color: var(--primary-color);
+}
+@keyframes translateproject-detail1 {
+    0%{
+        transform: translateY(-600px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes translateproject-detail2 {
+    0%{
+        transform: translateY(600px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+@media(max-width:1024px){
+    .project{
+        margin: 2rem 1rem;
+    }
+}
+@media(max-width:768px){
+    .project{
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .project-detail:nth-child(4){
+        margin-bottom: 5rem;
+    }
+}
+@media(max-width:425px){
+    .project-detail img{
+        width: 400px;
+        height: 200px;
+    }
+    .project-detail .btn .link{
+        padding: .7rem 2rem;
+        font-size: .9rem;
+        margin: 0.3rem;
+    }
+}
