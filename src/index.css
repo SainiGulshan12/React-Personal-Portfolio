@@ -18,6 +18,11 @@
   --cs-color: #1da1f2;
   --js-color: #f7df1e;
   --reac-color: #00d8ff;
+  --what-color:#25d366;
+  --code-color:#ff0055;
+  --linkdin-color:#0077B5;
+  --git-color:#010101;
+  --mail-color:#4285F4;
   --form-border-color:#828282;
 }
 html,body{

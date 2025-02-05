@@ -7,7 +7,7 @@
     object-fit: cover;
     width: 250px;
     height: 250px;
-    margin-top: 6rem;
+    margin-top: 4rem;
     border: 1px solid var(--secondary-color);
     border-radius: 50%;
 }

@@ -2,7 +2,8 @@ import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 import Typed from 'typed.js';
-import myimage from '../../assets/myimg.jpg'
+import myimage from '../../assets/myimg.jpg';
+
 
 const Home = () => {
   useEffect(() => {
@@ -27,8 +28,8 @@ const Home = () => {
         <p>I am a dedicated frontend developer with skills in HTML, CSS, JavaScript, ReactJS. I'm a Fresher.</p>
         <div className="btn">
           <Link to='/contact'><button className='contact'>Contact With Me</button></Link>
-          <Link to='https://drive.google.com/file/d/11d8Tp_LQnZLGU7cucToZ8eRbNDj7zTxd/preview' target='blank' ><button className='resume'>My Resume</button></Link>
-        </div> 
+          <a href='https://drive.google.com/file/d/11d8Tp_LQnZLGU7cucToZ8eRbNDj7zTxd/preview' target='blank' ><button className='resume' rel="noopener noreferrer">My Resume</button></a>
+        </div>
     </section>
   )
 }

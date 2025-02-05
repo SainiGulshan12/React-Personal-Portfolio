@@ -8,7 +8,7 @@
 .contact .heading h1::after{
     position: absolute;
     content: '';
-    top: 3rem;
+    top: 3.2rem;
     left: 35.3rem;
     width: 1.9rem;
     height: 2px;
@@ -44,6 +44,63 @@
     margin-right: 1.2rem;
     font-size: 1.5rem;
 }
+.contact-left .social{
+    padding: 1rem 0rem ;
+    margin: 1rem 0;
+}
+.contact-left .social .icon{
+    font-size: 1.25rem;
+    padding: .6rem .7rem;
+    border-radius: 50%;
+    margin-left: .5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-left .social .icon:nth-child(1){
+    color: var(--linkdin-color);
+    border: 1px solid var(--linkdin-color);
+}
+.contact-left .social .icon:nth-child(2){
+    color: var(--git-color);
+    border: 1px solid var(--git-color);
+}
+.contact-left .social .icon:nth-child(3){
+    color: var(--code-color);
+    border: 1px solid var(--code-color);
+    padding: .6rem !important;
+}
+.contact-left .social .icon:nth-child(4){
+    color: var(--mail-color);
+    border: 1px solid var(--mail-color);
+}
+.contact-left .social .icon:nth-child(5){
+    color: var(--what-color);
+    border: 1px solid var(--what-color);
+    padding: .6rem .75rem !important;
+}
+
+.contact-left .social .icon:nth-child(1):hover{
+    background: var(--linkdin-color);
+    color: var(--primary-color);
+}
+.contact-left .social .icon:nth-child(2):hover{
+    background: var(--git-color);
+    color: var(--primary-color);
+}
+.contact-left .social .icon:nth-child(3):hover{
+    background: var(--code-color);
+    color: var(--primary-color);
+}
+.contact-left .social .icon:nth-child(4):hover{
+    background: var(--mail-color);
+    color: var(--primary-color);
+}
+.contact-left .social .icon:nth-child(5):hover{
+    background: var(--what-color);
+    color: var(--primary-color);
+}
+
 .contact-details .contact-right{
     display: flex;
     flex-direction: column;

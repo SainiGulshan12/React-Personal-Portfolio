@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
 import './contact.css';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faLocationDot, faPhoneVolume, } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faLocationDot, faPhoneVolume, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 const Contact = () => {
   const formRef=useRef(null);
@@ -47,6 +50,13 @@ const Contact = () => {
             <p><span><FontAwesomeIcon icon={faPhoneVolume}/></span>+91 7014957196</p>
             <p><span><FontAwesomeIcon icon={faLocationDot}/></span>Kotputli-Bahror(RAJ)</p>
           </div>
+          <div className="social">
+            <a href='https://www.linkedin.com/in/gulshan-saini-6769482b4/' target='blank' className='icon' rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn}/></a>
+            <a href='https://github.com/SainiGulshan12/' target='blank' className='icon' rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub}/></a>
+            <Link to='/' className='icon'><FontAwesomeIcon icon={faCode} /></Link>
+            <a href='mailto:gulshansaini0125@gmail.com?subject=Hello%20Gulshan&body=I%20wanted%20to%20connect%20with%20you.' target='blank' className='icon'><FontAwesomeIcon icon={faEnvelope}/></a>
+            <a href='https://web.whatsapp.com/' target='blank' className='icon' rel="noopener noreferrer"><FontAwesomeIcon icon={faWhatsapp}/></a>
+          </div> 
         </div>
           <form className='contact-right'  ref={formRef} onSubmit={onSubmit}>
             <label htmlFor=''>Your Name  </label>
