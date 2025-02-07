@@ -7,9 +7,10 @@
   overflow: hidden;
   font-family: 'outfit',serif;
   scroll-behavior: smooth;
+  transition: 0.1s;
 }
 :root{
-  --primary-color:#fff;
+  --primary-color:#f5f3f3;
   --secondary-color:#000;
   --bg-color:#161513;
   --orangish-color : #da7c25;
@@ -24,6 +25,16 @@
   --git-color:#010101;
   --mail-color:#4285F4;
   --form-border-color:#828282;
+}
+.dark_theme{
+  --primary-color:#f5f3f3;
+  --secondary-color:#000;
+  --bg-color:#161513;
+}
+.light_theme{
+  --primary-color:#000000;
+  --secondary-color:#ffffff;
+  --bg-color:#f5f3f3;
 }
 html,body{
   background:var(--bg-color);
