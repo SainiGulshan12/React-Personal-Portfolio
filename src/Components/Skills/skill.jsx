@@ -7,6 +7,7 @@ import html from '../../assets/html.png';
 import css from '../../assets/css.png';
 import js from '../../assets/JavaScript.png';
 import react from '../../assets/react1.png';
+import boots from '../../assets/boottstrap.png';
 
 const Skill = () => {
   return (
@@ -27,6 +28,10 @@ const Skill = () => {
             <div className="icon">
               <img src={react} alt="ReactJs Logo" width='110px' />
               <p>ReactJs</p>
+            </div>
+            <div className="icon">
+              <img src={boots} alt="ReactJs Logo" width='95px' />
+              <p>Bootstrap</p>
             </div>
         </div>
         <div className="experience">
